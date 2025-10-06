@@ -1,0 +1,22 @@
+Now we will start week wise phases
+
+React Fundamentals (6 October - 7 October with project)
+What is React & why use it (SPA, Virtual DOM)
+
+JSX syntax
+
+Components (Functional vs Class)
+
+Props & State
+
+Event handling
+
+Conditional rendering
+
+Rendering lists & importance of keys
+
+
+👉 Projects:
+ ✅ Counter app
+ ✅ Todo list
+ ✅ Weather app (API fetch)
