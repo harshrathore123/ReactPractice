@@ -3,7 +3,6 @@ import Destructuring from './component/Desctructuing';
 import FirstName from './component/FirstName';
 import Increment from './component/Increment';
 import Event from './component/Event';
-import Form from './component/Form';
 
 function App() {
 
@@ -13,7 +12,6 @@ function App() {
     <Destructuring batch="mern" internship_exp="4month"/>
     <Increment/>
     <Event intro="Hi I am harsh rathore"/>
-    <Form/>
     </>
   )
 }
