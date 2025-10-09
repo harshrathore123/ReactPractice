@@ -12,13 +12,13 @@ function App() {
 
   return (
     <>
-    <FirstName name="Harsh Rathore" age="23"/>
+    {/* <FirstName name="Harsh Rathore" age="23"/>
     <Destructuring batch="mern" internship_exp="4month"/>
     <Increment/>
     <Event intro="Hi I am harsh rathore"/>
     <Form/>
     <Rendering isLoggedIn={false}/>
-    <RenderingList/>
+    <RenderingList/> */}
 
     <TodoList/>
 

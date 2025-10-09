@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6epnd0KtuwAaygjj-Ls7D5RjgwV_ijX_qUQ&s');
+}

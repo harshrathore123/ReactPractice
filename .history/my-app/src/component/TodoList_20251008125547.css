@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6epnd0KtuwAaygjj-Ls7D5RjgwV_ijX_qUQ&s');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+}
+
+.todobox{
+    border: 2px solid red;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 90px;
+    left:0;
+}

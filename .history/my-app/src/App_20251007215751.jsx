@@ -6,7 +6,6 @@ import Event from './component/Event';
 import Form from './component/Form';
 import Rendering from './component/Rendering';
 import RenderingList from './component/RenderingList';
-import TodoList from './component/TodoList';
 
 function App() {
 
@@ -19,9 +18,6 @@ function App() {
     <Form/>
     <Rendering isLoggedIn={false}/>
     <RenderingList/>
-
-    <TodoList/>
-
     </>
   )
 }

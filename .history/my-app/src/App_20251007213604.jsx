@@ -5,8 +5,6 @@ import Increment from './component/Increment';
 import Event from './component/Event';
 import Form from './component/Form';
 import Rendering from './component/Rendering';
-import RenderingList from './component/RenderingList';
-import TodoList from './component/TodoList';
 
 function App() {
 
@@ -17,11 +15,7 @@ function App() {
     <Increment/>
     <Event intro="Hi I am harsh rathore"/>
     <Form/>
-    <Rendering isLoggedIn={false}/>
-    <RenderingList/>
-
-    <TodoList/>
-
+    <Rendering/>
     </>
   )
 }
