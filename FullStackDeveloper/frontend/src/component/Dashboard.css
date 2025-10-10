@@ -1,0 +1,170 @@
+/* Navbar */
+        header {
+          position: fixed;
+          width: 100%;
+          background-color: white;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          z-index: 50;
+        }
+        .navbar-container {
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .logo {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #4f46e5;
+        }
+        nav a {
+          margin: 0 12px;
+          color: #374151;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+        nav a:hover {
+          color: #4f46e5;
+        }
+        .logout-btn {
+          padding: 8px 16px;
+          background-color: #4f46e5;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+        .logout-btn:hover {
+          background-color: #4338ca;
+        }
+
+        /* Hero Section */
+        .hero {
+          position: relative;
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+        }
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.5);
+        }
+        .hero-content {
+          position: relative;
+          text-align: center;
+          max-width: 600px;
+        }
+        .hero-content h2 {
+          font-size: 3rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+        .hero-content p {
+          font-size: 1.1rem;
+          margin-bottom: 1.5rem;
+        }
+        .hero-btn {
+          padding: 12px 24px;
+          background-color: #4f46e5;
+          color: white;
+          border-radius: 8px;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+        .hero-btn:hover {
+          background-color: #4338ca;
+        }
+
+        /* Popular Destinations */
+        .popular-section {
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 64px 24px;
+        }
+        .popular-section h2 {
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 2.5rem;
+        }
+        .destination-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        }
+        .destination-card {
+          background-color: white;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+          transition: box-shadow 0.3s ease;
+        }
+        .destination-card:hover {
+          box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        .destination-card img {
+          width: 100%;
+          height: 220px;
+          object-fit: cover;
+        }
+        .destination-card .content {
+          padding: 16px;
+        }
+        .destination-card h3 {
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+        .destination-card p {
+          color: #6b7280;
+          font-size: 0.9rem;
+        }
+
+        /* Special Offer */
+        .offer-section {
+          background-color: #4f46e5;
+          color: white;
+          padding: 64px 24px;
+          text-align: center;
+        }
+        .offer-section h2 {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+        .offer-section p {
+          font-size: 1.1rem;
+          margin-bottom: 1.5rem;
+        }
+        .offer-btn {
+          background: white;
+          color: #4f46e5;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+        .offer-btn:hover {
+          background-color: #e5e7eb;
+        }
+
+        /* Footer */
+        footer {
+          background-color: #111827;
+          color: #9ca3af;
+          text-align: center;
+          padding: 40px 0;
+        }
