@@ -1,0 +1,22 @@
+import { Link } from "react-router-dom";
+import './Navbar.css';
+
+export default function Navbar() {
+  return (
+    <header>
+      <div className="navbar-container">
+        <h1 className="logo">TravelExplorer</h1>
+
+        <nav>
+          <Link to="/">Home</Link>
+        </nav>
+
+        <div className="auth-buttons">
+          {/* Buttons should not wrap <Link> inside; instead style <Link> like a button */}
+          <Link to="/login" className="btn-primary">Login</Link>
+          <Link to="/signup" className="btn-secondary">Sign Up</Link>
+        </div>
+      </div>
+    </header>
+  );
+}

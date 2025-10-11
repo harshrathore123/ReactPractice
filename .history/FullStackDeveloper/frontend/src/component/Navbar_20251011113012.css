@@ -1,0 +1,82 @@
+/* Navbar Container */
+.navbar-container {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  color: #4f46e5;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Auth Buttons Container */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Login / Sign Up Links */
+.auth-buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-left: 50px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: white;
+}
+
+/* Login Button */
+.btn-primary {
+  background-color: #4f46e5;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Sign Up Button */
+.btn-secondary {
+  background-color: #6b7280;
+}
+
+.btn-secondary:hover {
+  background-color: #4b5563;
+  transform: translateY(-2px);
+}
+
+/* Optional: Add top margin to pages so content isn't hidden under fixed navbar */
+body {
+  margin: 0;
+  padding-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .auth-buttons {
+    margin-top: 0.5rem;
+  }
+
+  .auth-buttons a {
+    margin: 5px 0;
+  }
+}
