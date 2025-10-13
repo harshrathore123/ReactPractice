@@ -6,7 +6,6 @@ import Login from './component/Login'
 import Signup from './component/Signup'
 import Dashboard from './component/Dashboard'
 import { useEffect, useState } from 'react';
-import Menu from './component/Menu';
 function App() {
   const [isAuthenticated,setIsAuthenticated] = useState(false);
 
@@ -22,6 +21,7 @@ function App() {
     <Routes>
       <Route path='/login' element={<Login setIsAuthenticated={setIsAuthenticated}/>}/>
       <Route path='/register' element={<Signup/>}/>
+      <Route path='/menu' element={}/>
 
       {/* Protected Route Logic Inline */}
       <Route path='/dashboard' element={

@@ -22,6 +22,7 @@ function App() {
     <Routes>
       <Route path='/login' element={<Login setIsAuthenticated={setIsAuthenticated}/>}/>
       <Route path='/register' element={<Signup/>}/>
+      <Route path='/menu' element={<Menu/>}/>
 
       {/* Protected Route Logic Inline */}
       <Route path='/dashboard' element={

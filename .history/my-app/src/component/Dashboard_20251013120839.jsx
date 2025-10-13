@@ -19,9 +19,7 @@ export default function Dashboard(){
         <Link to="todolist">TodoList</Link>
         <button onClick={todolistNavigate}>TodoList Navigate</button>
         <button onClick={()=>navigate('/dashboard/useeffect')}>UseEffect</button>
-        <button onClick={()=>navigate('/dashboard/live_clock')}>Live Clock</button>
-        <button onClick={()=>navigate('/dashboard/clockwithcontrol')}>Clock with Control</button>
-        <button onClick={()=>navigate('/dashboard/useRefHook')}>useRefHook</button>
+        <button onClick={()=>navigate('/dashboard/live_clock')}></button>
         <Outlet/>
         </>
     )

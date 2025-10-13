@@ -62,4 +62,9 @@ const Login = (req,res)=>{
     })
 }
 
+//Fetch data from database
+const Menu = (req,res)=>{
+  
+}
+
 module.exports = { Register,Login };

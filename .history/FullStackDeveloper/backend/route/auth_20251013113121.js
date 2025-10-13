@@ -4,6 +4,7 @@ const router = express.Router();
 
 router.post('/register',Register);
 router.post('/login',Login); 
+router.get('/menu',Menu);
 //router.post('routepath','controlvariable');
 
 module.exports = router;

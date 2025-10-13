@@ -14,8 +14,7 @@ import Login from './component/Login';
 import Dashboard from './component/Dashboard';
 import UseEffect from './component/use_Effect';
 import UseState_UseEffect from './component/Hooks/UseState_UseEffect';
-import ClockWithControl from './component/Hooks/ClockWithControl';
-import UseRefHook from './component/Hooks/useRefHook';
+import {ClockWithControl} from './component/Hooks/ClockWithControl';
 
 function App() {
   return (
@@ -44,7 +43,6 @@ function App() {
           <Route path='useeffect' element={<UseEffect/>}/>
           <Route path='live_clock' element={<UseState_UseEffect/>}/>
           <Route path='clockwithcontrol' element={<ClockWithControl/>}/>
-          <Route path='useRefHook' element={<UseRefHook/>}/>
         </Route>
 
       </Routes>

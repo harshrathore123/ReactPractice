@@ -6,7 +6,6 @@ import Login from './component/Login'
 import Signup from './component/Signup'
 import Dashboard from './component/Dashboard'
 import { useEffect, useState } from 'react';
-import Menu from './component/Menu';
 function App() {
   const [isAuthenticated,setIsAuthenticated] = useState(false);
 
@@ -14,7 +13,7 @@ function App() {
     const loggedIn = localStorage.getItem('isLoggedin') === 'true';
     setIsAuthenticated(loggedIn);
   },[])
-
+  
   return (
     <BrowserRouter>
     <Navbar/>

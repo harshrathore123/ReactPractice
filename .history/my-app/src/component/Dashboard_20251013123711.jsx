@@ -21,7 +21,6 @@ export default function Dashboard(){
         <button onClick={()=>navigate('/dashboard/useeffect')}>UseEffect</button>
         <button onClick={()=>navigate('/dashboard/live_clock')}>Live Clock</button>
         <button onClick={()=>navigate('/dashboard/clockwithcontrol')}>Clock with Control</button>
-        <button onClick={()=>navigate('/dashboard/useRefHook')}>useRefHook</button>
         <Outlet/>
         </>
     )
