@@ -1,0 +1,152 @@
+/* GLOBAL STYLES & FONT */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CONTAINER & CARD */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Slightly wider card to accommodate side-by-side fields */
+    text-align: center;
+}
+
+/* HEADER ELEMENTS (Same as before) */
+.login-icon {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.login-card h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.login-card p {
+    color: #6c757d;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+/* FORM LAYOUT FOR SIDE-BY-SIDE FIELDS */
+.name-group,
+.details-group {
+    display: flex;
+    gap: 20px; /* Spacing between the side-by-side inputs */
+    margin-bottom: 20px;
+}
+
+.name-group .input-group,
+.details-group .input-group {
+    flex: 1; /* Makes each input group take up equal space */
+    margin-bottom: 0; /* Remove bottom margin here since it's on the container */
+}
+
+/* Specific styling for the Age field to make it smaller */
+.details-group .input-age {
+    flex: 0.4; /* Age field takes less space */
+    min-width: 80px;
+}
+.details-group .input-group:first-child {
+    flex: 1; /* City field takes more space */
+}
+
+/* FORM ELEMENTS (Standard Inputs) */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #343a40;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* BUTTON STYLES (Same as before) */
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* FOOTER LINK (Same as before) */
+.signup-link {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* RESPONSIVENESS (for smaller screens) */
+@media (max-width: 550px) {
+    .login-card {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 30px 25px;
+    }
+    /* Stack inputs on small screens for better usability */
+    .name-group,
+    .details-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    .name-group .input-group,
+    .details-group .input-group {
+        flex: auto; /* Allow fields to take full width */
+    }
+}

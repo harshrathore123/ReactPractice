@@ -1,0 +1,21 @@
+import './App.css'
+import Home from './component/Home'
+import Footer from './component/Footer'
+import {Routes,Route} from 'react-router-dom';
+import {ToastContainer} from 'react-toastify';
+import Navbar from './component/Navbar';
+function App(){
+  return(
+    <>
+    <ToastContainer position="top-right" reverseOrder={false}/>
+    <Navbar/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+    </Routes>
+    <Footer/>
+
+    </>
+  )
+}
+
+export default App

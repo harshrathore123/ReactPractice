@@ -1,0 +1,87 @@
+/* Desktop layout (default) */
+header#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 12px 18px;
+  background: #123; /* example */
+  color: #fff;
+}
+
+/* hide mobile menu button on desktop */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: inherit;
+  cursor: pointer;
+  align-content: center;
+  margin-left: 300px;
+}
+
+/* main-menu on desktop */
+nav.main-menu ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* small screens: collapse nav and show hamburger */
+@media (max-width: 768px) {
+  /* show mobile button */
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* hide desktop nav by default */
+  nav.main-menu {
+    position: absolute;
+    top: 64px; /* adjust depending on header height */
+    right: 12px;
+    left: 12px;
+    background: #123; /* same as header */
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 260ms ease, opacity 200ms ease, transform 200ms ease;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* menu open state */
+  nav.main-menu.open {
+    max-height: 400px; /* enough for menu items */
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* stack items vertically on mobile */
+  nav.main-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav.main-menu li {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  nav.main-menu li a {
+    display: block;
+    padding: 12px 16px;
+    color: #ddd;
+    text-decoration: none;
+  }
+
+  /* active style example */
+  nav.main-menu li a[style] {
+    /* inline style from activeStyle will apply, but you may add CSS class for active instead */
+  }
+}
