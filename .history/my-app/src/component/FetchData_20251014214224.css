@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card_container{
+    position: relative;
+}
+
+.card{
+    height: 300px;
+    width: 300px;
+    /* border: 2px solid green; */
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    border-radius: 20px;
+}
+
+.card img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.name{
+    position: absolute;
+    top: 200px;
+    left: ;
+}
+
+.age{
+    position: absolute;
+    top: ;
+    left: ;
+}
+
+.city{
+    position: absolute;
+    top: ;
+    left: ;
+}

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card_container{
+    border: 2px solid red;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.card{
+    height: 300px;
+    width: 300px;
+    border: 2px solid green;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    border-radius: 20px;
+}
+
+.card img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    
+}
