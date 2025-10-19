@@ -73,7 +73,7 @@ const TravelUserLogin = (req,res)=>{
     }
 
     const checkUserLoggedIn = 'select * from traveluser where email=?';
-    const userdetail = [email];
+    const userdetail = [email,password];
 
     db.query(checkUserLoggedIn,userdetail,(err,result)=>{
         if(err) return res.json({msg:`Error: ${err.message}`});

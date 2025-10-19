@@ -44,7 +44,7 @@ export default function Room(){
                                     </ul>
                                     <div className="room-link">
                                         <a href="#" data-toggle="modal" data-target="#modal-id">Read More</a>
-                                        <Link to='/booking'>Book Now</Link>
+                                        <Link to='/booking'>Book Now</lINK>
                                     </div>
                                 </div>
                             </div>

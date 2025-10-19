@@ -42,7 +42,7 @@ const TravelUser = (req,res)=>{
                 }
                 else {
                     // console.log(result);
-                    res.json({msg:"Registerd Successfully"});
+                    res.json({result:result});
                 }
             })
 
@@ -61,39 +61,8 @@ const ContactUsInfo = (req,res)=>{
     const contactuserdata = [name,email,subject,Message];
     db.query(contactusquery,contactuserdata,(err,result)=>{
         if(err) return res.json({msg:`Query Error: ${err.message}`});
-        else res.json({msg:"Successfully Stored Information"});
+        else res.json({result:result});
     })
 }
 
-const TravelUserLogin = (req,res)=>{
-    const {email,password} = req.body.userLogin;
-
-    if(!email||!password){
-        return res.json({msg:"Userame and Password must be filled"});
-    }
-
-    const checkUserLoggedIn = 'select * from traveluser where email=?';
-    const userdetail = [email];
-
-    db.query(checkUserLoggedIn,userdetail,(err,result)=>{
-        if(err) return res.json({msg:`Error: ${err.message}`});
-        else{
-
-              if (result.length === 0) {
-    return res.json({ msg: "User not found" });
-  }
-            const user = result[0];
-            const pass = user.password;
-            bcrypt.compare(password,pass,(err,check)=>{
-                if(err) return res.json({msg:`Error: ${err.message}`});
-                if(!check){
-                        return res.json({msg:"Not matched Password"});
-                    }
-                else{
-                    res.json({msg:"Successfully Login"})
-                }
-            })
-        }
-    })
-}
-module.exports = {Booking,TravelUser,ContactUsInfo,TravelUserLogin};
+module.exports = {Booking,TravelUser,ContactUsInfo};

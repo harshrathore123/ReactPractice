@@ -14,10 +14,7 @@ export default function Login(){
         axios.post('http://localhost:3000/travel/travelUserLogin',{userLogin}).
         then((res)=>{
             toast.success(res.data.msg);
-            // ✅ Only navigate if login is successful
-        if (res.data.msg === "Successfully Login") {
-          navigate('/');
-        }
+            navigate('/');
         }).
         catch((err)=>{
             toast.error(err.response?.data?.msg);

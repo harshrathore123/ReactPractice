@@ -66,25 +66,21 @@ const ContactUsInfo = (req,res)=>{
 }
 
 const TravelUserLogin = (req,res)=>{
-    const {email,password} = req.body.userLogin;
+    const {email,password} = req.body;
 
     if(!email||!password){
         return res.json({msg:"Userame and Password must be filled"});
     }
 
-    const checkUserLoggedIn = 'select * from traveluser where email=?';
-    const userdetail = [email];
+    const checkUserLoggedIn = 'select * from traveluser where email=? and password=?';
+    const userdetail = [email,password];
 
     db.query(checkUserLoggedIn,userdetail,(err,result)=>{
         if(err) return res.json({msg:`Error: ${err.message}`});
         else{
-
-              if (result.length === 0) {
-    return res.json({ msg: "User not found" });
-  }
             const user = result[0];
             const pass = user.password;
-            bcrypt.compare(password,pass,(err,check)=>{
+            bcrypt.compare(password,hash,(err,check)=>{
                 if(err) return res.json({msg:`Error: ${err.message}`});
                 if(!check){
                         return res.json({msg:"Not matched Password"});

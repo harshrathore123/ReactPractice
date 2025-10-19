@@ -19,7 +19,7 @@ export default function Signup(){
         axios.post('http://localhost:3000/travel/travelUser',{userdata}).
         then((res)=>{
             toast.success(res.data.msg);
-            // toast.success("Data successfully saved");
+            toast.success("Data successfully saved");
         }).
         catch((err)=>{
             toast.error(err.response?.data?.msg);

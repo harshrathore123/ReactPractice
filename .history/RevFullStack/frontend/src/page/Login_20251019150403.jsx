@@ -1,28 +1,17 @@
 import { NavLink } from 'react-router-dom';
 import './Login.css';
 import { useState } from 'react';
-import axios from 'axios';
-import {toast} from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
 export default function Login(){
-    const [userLogin,setTravelUserLogin] = useState({
+    const [traveluserLogin,setTravelUserLogin] = useState({
         email:"",
         password:""
     })
-    const navigate = useNavigate();
+
     const traveluserLoggedIn = () =>{
-        axios.post('http://localhost:3000/travel/travelUserLogin',{userLogin}).
+        axios.post('http://localhost:3000/travel/travelUserLogin',{traveluserLogin}).
         then((res)=>{
-            toast.success(res.data.msg);
-            // ✅ Only navigate if login is successful
-        if (res.data.msg === "Successfully Login") {
-          navigate('/');
-        }
-        }).
-        catch((err)=>{
-            toast.error(err.response?.data?.msg);
+            
         })
-        
     }
     return(
         <>
@@ -35,16 +24,16 @@ export default function Login(){
                 <div className="input-group">
                     <label for="email">Email Address</label>
                     <input 
-                    value={userLogin.email}
-                    onChange={(e)=>setTravelUserLogin({...userLogin,email:e.target.value})}
+                    value={traveluserLogin.email}
+                    onChange={(e)=>setTravelUserLogin({...traveluserLogin,email:e.target.value})}
                     type="email" id="email" name="email" placeholder="enter@email.com" required/>
                 </div>
                 
                 <div className="input-group">
                     <label for="password">Password</label>
                     <input 
-                    value={userLogin.password}
-                    onChange={(e)=>setTravelUserLogin({...userLogin,password:e.target.value})}
+                    value={traveluserLogin.password}
+                    onChange={(e)=>setTravelUserLogin({...traveluserLogin,password:e.target.value})}
                     type="password" id="password" name="password" placeholder="••••••••" required/>
                 </div>
                 

@@ -72,6 +72,7 @@ export default function Contact(){
                     <div className="col-md-12">
                         <div className="contact-form">
                             <div id="success"></div>
+                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
                                 <div className="form-row">
                                     <div className="control-group col-sm-6">
                                         <label>Your Name</label>
@@ -107,6 +108,7 @@ export default function Contact(){
                                     <p className="help-block text-danger"></p>
                                 </div>
                                 <div className="button"><button onClick={addContactDetail} type="submit" id="sendMessageButton">Send Message</button></div>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -21,12 +21,9 @@ export default function Booking() {
         localStorage.setItem('bookingdetail', JSON.stringify(bookingdetail));
         axios.post('http://localhost:3000/travel/booking',{bookingdetail})
         .then((res)=>{
-        //     toast.success('Booking submitted successfully!', {
-        //     theme: 'colored',
-        //     autoClose: 3000
-        // })
-        toast.success(res.data.msg,{
-            autoClose:5000,
+            toast.success('Booking submitted successfully!', {
+            theme: 'colored',
+            autoClose: 3000
         })
         })
         .catch((err)=>{
